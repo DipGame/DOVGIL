@@ -1,0 +1,302 @@
+@media (min-width: 1151px) {
+	// ::-webkit-scrollbar-track {
+	// 	-webkit-box-shadow: inset 0 0 6px rgba(34, 29, 72, 1);
+	// 	border-radius: 10px;
+	// 	background-color: #100B38;
+	// }
+
+	// ::-webkit-scrollbar {
+	// 	width: 12px;
+	// 	background-color: #100B38;
+	// 	height: 10px;
+	// }
+
+	// ::-webkit-scrollbar-thumb {
+	// 	border-radius: 10px;
+	// 	-webkit-box-shadow: inset 0 0 6px #EFEFEF;
+	// 	background-color: #EFEFEF;
+	// }
+}
+
+* {
+	box-sizing: border-box;
+	background-repeat: no-repeat;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	overflow-x: hidden;
+	font-family: Noto Serif;
+	// position: relative;
+}
+
+div,
+li,
+p,
+a,
+span,
+section,
+button {
+	font-family: Manrope;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: left;
+}
+
+h1,
+h2 {
+	font-family: Noto Serif;
+	font-size: 50px;
+	font-weight: 600;
+	line-height: 70px;
+	text-align: left;
+	color: #000;
+	word-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+
+	h1,
+	h2 {
+		font-family: Noto Serif;
+		font-size: 40px;
+		font-weight: 600;
+		line-height: 56px;
+		text-align: left;
+	}
+}
+
+h3,
+h4,
+h5,
+h6 {
+	font-family: Manrope;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 36px;
+	text-align: left;
+}
+
+a {
+	text-decoration: none;
+	transition: .5s;
+	cursor: pointer;
+	color: #000;
+}
+
+a:hover {
+	color: #DB3B16 !important;
+}
+
+.padding {
+	padding: 0 20px
+}
+
+main {
+	padding: 0;
+	margin: 0;
+}
+
+.white {
+	color: #FFF;
+}
+
+.black {
+	color: #1D1D1D;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex_direct {
+	flex-direction: column;
+}
+
+.flex_center {
+	justify-content: center;
+}
+
+.max-width {
+	width: 100%;
+	max-width: 1290px;
+}
+
+.center {
+	margin: 0 auto;
+}
+
+.default {
+	width: 100%;
+	max-width: 1290px;
+	margin: 0 auto 50px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.default a {
+	color: #07f;
+	text-decoration: underline;
+	display: inline-block;
+	font-family: Manrope;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: left;
+}
+
+.default p {
+	font-family: Manrope;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: left;
+}
+
+.default ul {
+	list-style-position: inside;
+	padding-left: 1.2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.default ol {
+	list-style-position: inside;
+	padding-left: 0;
+}
+
+.default ul li {
+	list-style: disc;
+	font-family: Manrope;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: left;
+}
+
+.default ul li::marker {
+	color: #10B981;
+}
+
+.default table {
+	width: 100%;
+	font-family: Manrope;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: left;
+}
+
+.default caption {
+	border-bottom: none;
+	background-color: #908ea3;
+	font-family: Manrope;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: left;
+}
+
+.default thead th {
+	background-color: #908ea3;
+	font-family: Manrope;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: left;
+}
+
+.default tbody td {
+	background-color: #d4d4da;
+	text-align: center;
+	font-family: Manrope;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+@media (max-width: 550px) {
+	.default h3 {
+		font-family: Manrope;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 36px;
+		text-align: left;
+	}
+
+	.default ul li,
+	.default p,
+	.default a {
+		font-family: Manrope;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 24px;
+		text-align: left;
+	}
+}
+
+a.box-cont {
+	cursor: pointer;
+}
+
+a.button {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	background-color: #10B981;
+	width: 100%;
+	max-width: 360px;
+	height: 60px;
+	align-items: center;
+	color: #111827;
+	transition: all .5s;
+	cursor: pointer;
+	font-family: Manrope;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 19.2px;
+	text-align: left;
+	text-transform: uppercase;
+	color: #FFF;
+	border-radius: 15px;
+	border: 1px solid #10B981;
+}
+
+a.button:hover {
+	background-color: #FFF;
+	color: #111827;
+	transition: all .5s;
+	border: 1px solid #10B981;
+}
+
+@media (max-width: 900px) {
+	a.button {
+		max-width: 300px;
+		height: 50px;
+		font-family: Manrope;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 14.4px;
+		text-align: left;
+	}
+}
+
+@media (max-width: 500px) {
+	a.button_3 {
+		max-width: none;
+	}
+}
+
+.img {
+	overflow: hidden;
+}
+
+.invise {
+	display: none !important;
+}
