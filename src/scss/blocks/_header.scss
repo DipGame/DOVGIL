@@ -94,7 +94,169 @@
             left: 0;
             transition: .5s;
             z-index: 11;
+
+            display: flex;
+            flex-direction: row-reverse;
+
+
+            .cont {
+                background-color: #FFF;
+                padding: 40px 30px 100px;
+                width: 100%;
+                max-width: 300px;
+                height: 100vh;
+                overflow-y: scroll;
+
+                .menu_mob {
+                    display: flex;
+                    flex-direction: column;
+
+                    li {
+                        a {
+                            display: flex;
+                            height: 65px;
+                            align-items: center;
+                            border-bottom: 1px solid #DCDCDC;
+                            font-family: Manrope;
+                            font-size: 18px;
+                            font-weight: 500;
+                            line-height: 24.59px;
+                            text-align: left;
+                        }
+                    }
+                }
+
+                .adress__mob {
+
+                    .cont_2 {
+                        ul {
+                            li {
+                                overflow: hidden;
+                                transition: .5s;
+                                border-bottom: 1px solid #DCDCDC;
+                                padding: 30px 0;
+
+                                .title {
+                                    font-family: Manrope;
+                                    font-size: 18px;
+                                    font-weight: 700;
+                                    line-height: 24.59px;
+                                    text-align: left;
+                                    max-height: 85px;
+                                    transition: .5s;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    gap: 20px;
+                                    transition: .5s;
+                                }
+
+                                .title::after {
+                                    content: "";
+                                    display: block;
+                                    background-image: url("./../img/arrow.svg");
+                                    width: 16px;
+                                    height: 10px;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    background-size: contain;
+                                }
+
+                                .hidd {
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    max-height: 0;
+                                    transition: .5s;
+
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 20px;
+
+                                    .adress__title {
+                                        font-family: Manrope;
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                        line-height: 23.8px;
+                                        text-align: left;
+                                        padding-top: 20px;
+                                    }
+
+                                    .phone__title {
+                                        font-family: Manrope;
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                        line-height: 21.86px;
+                                        text-align: left;
+                                        align-items: center;
+                                    }
+
+                                    .adress__title,
+                                    .phone__title {
+                                        display: flex;
+                                        gap: 10px;
+                                    }
+
+                                    .phone__title::before,
+                                    .adress__title::before {
+                                        content: "";
+                                        display: block;
+
+                                        min-width: 25px;
+                                        min-height: 25px;
+                                        max-width: 25px;
+                                        max-height: 25px;
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        background-size: contain;
+                                        transition: .5s;
+                                    }
+
+                                    .adress__title::before {
+                                        background-image: url("./../img/point.svg");
+                                    }
+
+                                    .phone__title::before {
+                                        background-image: url("./../img/phone.svg");
+                                    }
+                                }
+                            }
+
+
+                        }
+                    }
+                }
+
+                .adress__mob {
+
+                    .cont_2 {
+                        ul {
+                            li.open {
+                                overflow: hidden;
+                                transition: .5s;
+
+                                .title {
+                                    // border: none;
+                                    transition: .5s;
+                                }
+
+                                .hidd {
+                                    visibility: visible;
+                                    opacity: 1;
+                                    max-height: 10000px;
+                                    transition: .5s;
+                                }
+
+                                .title::after {
+                                    transition: .5s;
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
+
         .cont__hidd.open {
             transform: translateX(0%);
             transition: .5s;
@@ -115,12 +277,19 @@
                 }
             }
         }
+
     }
 }
 
 @media (max-width: 1110px) {
     header {
         background-color: #FFFFFF;
+    }
+}
+
+@media (min-width: 1111px) {
+    header {
+        z-index: 2;
     }
 }
 

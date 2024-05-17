@@ -1,5 +1,17 @@
-<div class="overlay open">
+<div class="overlay">
 
+</div>
+<div class="popup img">
+    <div class="popup__container">
+        <svg class="close-btn" width="60" height="60" viewBox="0 0 60 60" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <rect width="60" height="60" fill="#013C38" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M27.5843 30L10 12.4157L12.4157 10L30 27.5843L47.5844 10L50 12.4157L32.4157 30L49.9436 47.5263L47.5263 49.9436L30 32.4157L12.4157 50L10 47.5844L27.5843 30Z"
+                fill="white" />
+        </svg>
+        <img src="" alt="doc">
+    </div>
 </div>
 <header class="padding flex">
     <div class="header__container">
@@ -139,7 +151,7 @@
             </svg>
         </a>
 
-        <div class="cont__hidd open">
+        <div class="cont__hidd" id="hidd_menu">
             <div id="close_btn">
                 <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="0.5" y="0.5" width="73.2172" height="73.2172" stroke="#DB3B16" />
@@ -149,38 +161,48 @@
                         transform="rotate(-45 20.1797 54.4307)" fill="white" />
                 </svg>
             </div>
-            <ul class="menu_mob" id="menu_mob">
-            </ul>
+            <div class="cont">
+                <ul class="menu_mob" id="menu_mob">
+                </ul>
 
-            <div class="adress__mob">
-                <div class="cont_2">
-                    <ul>
-                        <li>
-                            Офис в г. Сургуте
-                            <div class="hidd">
-                                <p class="adress__title">
-                                    г. Сургуте, Деловой Центр «Китай Город», пр-д. Лубянский, д.27/1 с1, 4 этаж, офис
-                                    432
-                                </p>
-                                <a class="phone__title">
-                                    +7(3462)97-64-77
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            Офис в г. Москва
-                            <div class="hidd">
-                                <p class="adress__title">
-                                    г. Москва, Деловой Центр «Китай Город», пр-д. Лубянский, д.27/1 с1, 4 этаж, офис 432
-                                </p>
-                                <a class="phone__title">
-                                    +7(495)761-77-74
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="adress__mob">
+                    <div class="cont_2">
+                        <ul>
+                            <li class="open">
+                                <div class="title">
+                                    Офис в г. Сургуте
+                                </div>
+                                <div class="hidd">
+                                    <p class="adress__title">
+                                        г. Сургуте, Деловой Центр «Китай Город», пр-д. Лубянский, д.27/1 с1, 4 этаж,
+                                        офис
+                                        432
+                                    </p>
+                                    <a class="phone__title">
+                                        +7(3462)97-64-77
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">
+                                    Офис в г. Москва
+                                </div>
+
+                                <div class="hidd">
+                                    <p class="adress__title">
+                                        г. Москва, Деловой Центр «Китай Город», пр-д. Лубянский, д.27/1 с1, 4 этаж, офис
+                                        432
+                                    </p>
+                                    <a class="phone__title">
+                                        +7(495)761-77-74
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 </header>

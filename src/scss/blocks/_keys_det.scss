@@ -1,0 +1,93 @@
+.key_det {
+    width: 100%;
+    max-width: 1290px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-bottom: 100px;
+        margin-bottom: 100px;
+        border-bottom: 1px solid #DCDCDC;
+
+        a.button {
+            width: 100%;
+            max-width: 195px;
+            font-family: Manrope;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 27px;
+            text-align: left;
+            text-transform: none;
+            height: 50px;
+        }
+
+        .cont {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            h3 {
+                font-family: Manrope;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 36px;
+                text-align: left;
+            }
+
+            p {
+                font-family: Manrope;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                text-align: left;
+            }
+        }
+
+        .num {
+            padding: 30px;
+            background-color: #EEEEEE;
+            width: 100%;
+            max-width: max-content;
+
+            span {
+                font-family: Noto Serif;
+                font-size: 50px;
+                font-weight: 700;
+                line-height: 75px;
+                text-align: left;
+                color: #DB3B16;
+            }
+
+            p {
+                font-family: Manrope;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                text-align: left;
+
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .key_det .card .num span {
+        font-family: Noto Serif;
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 60px;
+        text-align: left;
+    }
+
+    .key_det .card .num p {
+        font-family: Manrope;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+    }
+}

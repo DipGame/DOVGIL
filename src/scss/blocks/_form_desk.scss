@@ -1,0 +1,185 @@
+.deskForm {
+    width: 100%;
+    max-width: 1290px;
+    margin: 0 auto;
+    background-color: #013C38;
+    margin-bottom: 80px;
+    padding: 70px 110px;
+
+    h3 {
+        font-family: Noto Serif;
+        font-size: 50px;
+        font-weight: 600;
+        line-height: 75px;
+        text-align: left;
+        color: #FFF;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-family: Manrope;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 27px;
+        text-align: left;
+        color: #FFF;
+        margin-bottom: 40px;
+    }
+
+    .form {
+        display: flex;
+        gap: 30px;
+        // justify-content: space-between;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+
+        .button {
+            background-color: #DB3B16;
+            width: 100%;
+            max-width: 335px;
+            color: #FFF;
+            font-family: Manrope;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 19.6px;
+            text-align: left;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .5s;
+            height: 60px;
+        }
+
+        .button:hover {
+            background-color: #B62E0E;
+            transition: .5s;
+        }
+
+
+        .inp_cont {
+            width: 100%;
+            max-width: 335px;
+            position: relative;
+
+            input {
+                height: 60px;
+                background-color: #FFF;
+                width: 100%;
+                padding: 0 20px;
+                font-family: Manrope;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 25.2px;
+                text-align: left;
+            }
+
+            input::placeholder {
+                color: #989898;
+            }
+
+            span {
+                display: none;
+                position: absolute;
+                bottom: -30px;
+                font-family: Manrope;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 22.4px;
+                text-align: left;
+                color: #DB3B16;
+            }
+        }
+    }
+
+    .dop {
+        color: #989898;
+        font-family: Manrope;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+
+        a:hover {
+            color: #B62E0E;
+        }
+
+        a {
+            color: #989898;
+        }
+    }
+}
+
+@media (max-width: 1314px) {
+    .deskForm .form .button {
+        margin-top: 20px;
+    }
+
+    .deskForm .form .inp_cont {
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 1119px) {
+    .deskForm .form {
+        flex-direction: column;
+    }
+
+    .deskForm .form .button {
+        margin-top: 0px;
+    }
+
+    .deskForm .form .inp_cont span {
+        bottom: -25px;
+    }
+}
+
+@media (max-width: 777px) {
+    .deskForm {
+        padding: 70px 15px;
+
+        h3 {
+            font-family: Noto Serif;
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 60px;
+            text-align: left;
+        }
+
+        p {
+            font-family: Manrope;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            text-align: left;
+
+        }
+    }
+
+    .deskForm .form .inp_cont {
+        max-width: none;
+    }
+
+    .deskForm .form .button {
+        max-width: none;
+    }
+
+    .deskForm .form .inp_cont span {
+        font-size: 12px;
+    }
+}
+
+.deskForm .form .inp_cont.active {
+    span {
+        display: block;
+    }
+
+    input {
+       color: #DB3B16;
+    }
+
+    input::placeholder {
+        color: #DB3B16;
+    }
+}

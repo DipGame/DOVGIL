@@ -1,0 +1,180 @@
+.contacts {
+    width: 100%;
+    max-width: 1290px;
+    margin: 0 auto;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .card {
+        display: flex;
+        border: 1px solid #DCDCDC;
+
+        .title_cont,
+        .ymaps-2 {
+            width: 50%;
+        }
+
+        .title_cont {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            h3 {
+                font-family: Noto Serif;
+                font-size: 30px;
+                font-weight: 600;
+                line-height: 40.86px;
+                text-align: left;
+                color: #DB3B16;
+                text-transform: uppercase;
+            }
+
+            .cont_1 {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                a {
+                    font-family: Manrope;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 27px;
+                    text-align: left;
+                    display: flex;
+                    gap: 25px;
+                    align-items: center;
+                }
+
+                a::before {
+                    content: "";
+                    display: block;
+                    min-width: 25px;
+                    min-height: 25px;
+                    max-width: 25px;
+                    max-height: 25px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    transition: .5s;
+                }
+
+                .phone::before {
+                    background-image: url("./../img/phone_1.svg");
+                }
+
+                .adress:hover,
+                .email:hover,
+                .time:hover {
+                    color: #000 !important;
+                    cursor: default;
+                }
+
+                .adress::before {
+                    background-image: url("./../img/point_1.svg");
+                }
+
+                .email::before {
+                    background-image: url("./../img/mail_1.svg");
+                }
+
+                .time::before {
+                    background-image: url("./../img/time_1.svg");
+                }
+
+            }
+        }
+    }
+}
+
+[class*="ymaps-2"][class*="-ground-pane"] {
+    filter: url(#grayscale);
+    -webkit-filter: grayscale(100%);
+    z-index: 5;
+}
+
+.ymaps-2-1-79-map-copyrights-promo {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .contacts .card {
+        flex-direction: column;
+
+        .title_cont,
+        .ymaps-2 {
+            width: 100%;
+        }
+
+        .ymaps-2 {
+            height: 345px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .contacts .card .title_cont h3 {
+        font-family: Noto Serif;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32.69px;
+        text-align: left;
+    }
+
+    .contacts .card .title_cont .cont_1 a {
+        font-family: Manrope;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+    }
+
+    .contacts .card .title_cont h3 {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .contacts .card .title_cont h3::before {
+        content: "";
+        display: block;
+        min-width: 16px;
+        min-height: 10px;
+        max-width: 16px;
+        max-height: 10px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: .5s;
+    }
+
+    .contacts .card .title_cont h3::before {
+        background-image: url("./../img/arrow.svg");
+    }
+
+    .contacts .card.open {
+        .title_cont h3::before {
+            transform: rotate(180deg);
+            transition: .5s;
+        }
+    }   
+
+    .contacts .card .title_cont .cont_1 {
+        display: none;
+    }
+
+    .contacts .card .ymaps-2 {
+        display: none;
+    }
+    .contacts .card.open .title_cont .cont_1 {
+        display: flex;
+    }
+
+    .contacts .card.open .ymaps-2 {
+        display: block;
+    }
+}

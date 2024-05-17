@@ -19,8 +19,9 @@
 }
 
 * {
-	box-sizing: border-box;
-	background-repeat: no-repeat;
+	box-sizing: border-box !important;
+	background-repeat: no-repeat !important;
+	word-break: break-word !important;
 }
 
 html {
@@ -29,6 +30,7 @@ html {
 
 body {
 	overflow-x: hidden;
+	// overflow-y: scroll;
 	font-family: Noto Serif;
 	// position: relative;
 }
@@ -58,15 +60,57 @@ h2 {
 	word-wrap: break-word;
 }
 
+h1.title,
+h2.title {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 60px;
+	width: 100%;
+	max-width: 1330px;
+	padding: 0 20px;
+	text-transform: uppercase;
+	word-break: break-word;
+}
+
+h1.title_1 {
+	max-width: none;
+	padding: 0;
+	margin: 0;
+}
+
+h2.title {
+	margin: 0;
+	max-width: none;
+	padding: 0;
+}
+
 @media (max-width: 600px) {
 
 	h1,
 	h2 {
 		font-family: Noto Serif;
-		font-size: 40px;
+		font-size: 34px;
 		font-weight: 600;
 		line-height: 56px;
 		text-align: left;
+	}
+
+	h1.title,
+	h2.title {
+		display: block;
+		margin-bottom: 40px;
+	}
+
+	h1.title_1 {
+		max-width: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	h2.title {
+		margin: 0;
+		max-width: none;
+		padding: 0;
 	}
 }
 
@@ -93,7 +137,7 @@ a:hover {
 }
 
 .padding {
-	padding: 0 20px
+	padding: 0 15px
 }
 
 main {
@@ -181,7 +225,7 @@ main {
 }
 
 .default ul li::marker {
-	color: #10B981;
+	color: #000;
 }
 
 .default table {
@@ -249,42 +293,45 @@ a.button {
 	display: flex;
 	justify-content: center;
 	gap: 10px;
-	background-color: #10B981;
 	width: 100%;
-	max-width: 360px;
+	max-width: 410px;
 	height: 60px;
 	align-items: center;
 	color: #111827;
 	transition: all .5s;
 	cursor: pointer;
 	font-family: Manrope;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 600;
-	line-height: 19.2px;
+	line-height: 19.6px;
 	text-align: left;
 	text-transform: uppercase;
-	color: #FFF;
-	border-radius: 15px;
-	border: 1px solid #10B981;
+	border: 1px solid #DB3B16;
 }
 
 a.button:hover {
-	background-color: #FFF;
-	color: #111827;
+	background-color: #B62E0E;
+	color: #FFF !important;
 	transition: all .5s;
-	border: 1px solid #10B981;
+	border: 1px solid #B62E0E;
 }
 
 @media (max-width: 900px) {
 	a.button {
-		max-width: 300px;
-		height: 50px;
+		// max-width: 300px;
+		// height: 50px;
 		font-family: Manrope;
-		font-size: 12px;
+		font-size: 14px;
 		font-weight: 600;
-		line-height: 14.4px;
+		line-height: 19.6px;
 		text-align: left;
 	}
+}
+
+a.button_2 {
+	background-color: #DB3B16;
+	color: #FFF !important;
+	border: none;
 }
 
 @media (max-width: 500px) {
@@ -299,4 +346,99 @@ a.button:hover {
 
 .invise {
 	display: none !important;
+}
+
+.popup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 11;
+	// background-color: #013C38;
+	// padding: 50px;
+	// max-width: min-content;
+	visibility: hidden;
+	opacity: 0;
+	transition: .5s;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: max-content;
+	padding: 0 20px;
+
+	.popup__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: auto;
+		position: relative;
+
+		img {
+			object-fit: contain;
+			object-position: center;
+			border: 50px solid #013C38;
+			width: 100%;
+			max-width: min-content;
+			max-height: 90vh;
+			display: flex;
+			position: relative;
+
+
+		}
+
+		.close-btn {
+			position: absolute;
+			right: 49px;
+			top: 49px;
+			z-index: 3;
+			cursor: pointer;
+		}
+
+		.close-btn:hover {
+			path {
+				opacity: .5;
+			}
+		}
+
+
+
+		@media (max-width: 700px) {
+			img {
+				border: 15px solid #013C38;
+			}
+
+			.close-btn {
+				position: absolute;
+				right: 14px;
+				top: 14px;
+				z-index: 3;
+				width: 35px;
+				height: 35px;
+			}
+		}
+	}
+
+}
+
+.popup.open {
+	display: flex;
+	visibility: visible;
+	opacity: 1;
+	transition: .5s;
+}
+
+.noselect {
+	-webkit-touch-callout: none;
+	/* iOS Safari */
+	-webkit-user-select: none;
+	/* Safari */
+	-khtml-user-select: none;
+	/* Konqueror HTML */
+	-moz-user-select: none;
+	/* Old versions of Firefox */
+	-ms-user-select: none;
+	/* Internet Explorer/Edge */
+	user-select: none;
 }

@@ -1,0 +1,102 @@
+.razdels {
+    width: 100%;
+    max-width: 1290px;
+    margin: 0 auto;
+    padding: 100px 0;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+
+    .cont {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .cont_1 {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+
+            .card {
+                width: 100%;
+                max-width: 410px;
+                border: 1px solid #DCDCDC;
+                padding: 30px 30px 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                cursor: pointer;
+                height: min-content;
+
+                .top {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 20px;
+
+                    h3 {
+                        font-family: Manrope;
+                        font-size: 18px;
+                        font-weight: 700;
+                        line-height: 24.59px;
+                        text-align: left;
+                        word-break: break-all;
+                    }
+
+                    img {
+                        min-width: 80px;
+                        min-height: 80px;
+                        max-width: 80px;
+                        max-height: 80px;
+                        object-fit: contain;
+                        object-position: center;
+                    }
+                }
+
+                .text_hidd {
+                    // display: -webkit-box;
+                    // -webkit-line-clamp: 2;
+                    // -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    transition: 5s;
+                    max-height: 100px;
+                    color: #000 !important;
+                }
+            }
+
+            .card::after {
+                content: "";
+                display: block;
+                background-image: url("./../img/arrow.svg");
+                min-width: 16px;
+                min-height: 9px;
+                max-width: 16px;
+                max-height: 9px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                transition: .5s;
+                margin: 0 auto;
+            }
+
+            .card:hover::after {
+                transform: rotate(180deg);
+            }
+
+            .card:hover {
+                .text_hidd {
+                    transition: 5s;
+                    max-height: 10000px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .razdels .cont .cont_1 .card::after,
+    .razdels .cont .cont_1 .card .text_hidd,
+    .razdels .cont .cont_1 .card:hover .text_hidd {
+        display: none;
+    }
+}

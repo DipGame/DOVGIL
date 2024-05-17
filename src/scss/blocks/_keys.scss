@@ -1,0 +1,265 @@
+.keys {
+    width: 100%;
+    max-width: 1290px;
+    margin: 0 auto;
+    padding: 100px 0;
+
+    .cont {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 30px;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+
+            .top {
+                margin-left: auto;
+                padding: 0 35px;
+                border-bottom: 35px solid #DB3B16;
+                border-left: 35px solid transparent;
+                z-index: 1;
+                position: relative;
+                width: 220px;
+
+                p {
+                    font-family: Manrope;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 21px;
+                    text-align: left;
+                    color: #FFF;
+                    z-index: 2;
+                    position: absolute;
+                    top: 7px;
+                    right: 35px;
+                }
+            }
+
+            .cont_1 {
+                background-color: #EEEEEE;
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                .name {
+                    font-family: Manrope;
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 36px;
+                    text-align: left;
+                }
+
+                .cont_1_1 {
+                    display: flex;
+                    gap: 30px;
+                    justify-content: space-between;
+
+                    .cont_2 {
+                        width: 100%;
+                        max-width: 1040px;
+                        background-color: #FFF;
+                        padding: 30px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+
+                        .title_cont {
+                            display: flex;
+                            gap: 20px;
+
+                            .title {
+                                font-family: Manrope;
+                                font-size: 16px;
+                                font-weight: 700;
+                                line-height: 24px;
+                                text-align: left;
+                                word-break: break-all;
+                                min-width: 100px;
+                            }
+
+                            span {
+                                font-family: Manrope;
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 24px;
+                                text-align: left;
+                                display: block;
+                                width: 100%;
+                                max-width: 870px;
+                            }
+                        }
+                    }
+
+                    .cont_3 {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 15px;
+                        background-color: #FFF;
+                        width: 100%;
+                        max-width: 160px;
+                        padding: 25px 15px;
+                        height: min-content;
+
+                        .img {
+                            min-width: 94px;
+                            max-width: 94px;
+                            min-height: 155px;
+                            max-height: 155px;
+                            position: relative;
+
+                            img {
+                                object-fit: cover;
+                                object-position: center;
+                                min-width: 94px;
+                                max-width: 94px;
+                                min-height: 155px;
+                                max-height: 155px;
+                            }
+
+                            .search {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                        }
+
+                        p {
+                            font-family: Manrope;
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 24px;
+                            text-align: left;
+                            color: #DB3B16;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .keys .cont .card .cont_1 .cont_1_1 {
+        flex-direction: column;
+    }
+
+    .keys .cont .card .cont_1 .cont_1_1 .cont_3 .img {
+        display: none;
+    }
+
+    .keys .cont .card .cont_1 .cont_1_1 .cont_3 {
+        max-width: none;
+        height: 90px;
+        gap: 0;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .keys .cont .card .cont_1 .name {
+        font-family: Manrope;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 27px;
+        text-align: left;
+    }
+
+    .keys .cont .card .cont_1 .cont_1_1 .cont_2 .title_cont .title {
+        font-family: Manrope;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 21px;
+        text-align: left;
+    }
+
+    .keys .cont .card .cont_1 .cont_1_1 .cont_2 .title_cont span {
+        font-family: Manrope;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: left;
+    }
+}
+
+@media (max-width: 500px) {
+    .keys .cont .card .cont_1 .cont_1_1 .cont_2 .title_cont {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .keys .cont .card .cont_1 .cont_1_1 {
+        gap: 15px;
+    }
+
+    .keys .cont .card .cont_1 {
+        padding: 30px 15px;
+    }
+
+    .keys .cont .card .cont_1 .cont_1_1 .cont_2 {
+        padding: 15px;
+    }
+}
+
+.fancybox__slide.has-image>.fancybox__content {
+    position: relative;
+}
+
+.pagination {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    ul {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+
+        li:nth-child(n+5) {
+            display: none;
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border: 1px solid #DCDCDC;
+        }
+
+        a:hover {
+            border: 1px solid #DB3B16;
+        }
+
+        li.active {
+            a {
+                color: #DB3B16 !important;
+                border: 1px solid #DB3B16;
+            }
+        }
+
+
+    }
+
+    svg {
+        cursor: pointer;
+        rect {
+            transition: .5s;
+        }
+    }
+    svg:hover {
+        cursor: pointer;
+
+        rect {
+            stroke: #DB3B16;
+            transition: .5s;
+        }
+    }
+}

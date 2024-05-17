@@ -1,0 +1,270 @@
+.serv_det {
+    width: 100%;
+    max-width: 1290px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    padding-bottom: 80px;
+    margin-bottom: 80px;
+    border-bottom: 1px solid #DCDCDC;
+
+    .menu__cont {
+        border: 1px solid #DCDCDC;
+        padding: 30px;
+        width: 300px;
+        min-width: 300px;
+        height: min-content;
+
+        h3 {
+            font-family: Noto Serif;
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 38.4px;
+            text-align: left;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .menu_left {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+
+            a {
+                font-family: Manrope;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 21px;
+                text-align: left;
+                color: #DB3B16;
+                text-transform: uppercase;
+            }
+
+            a:hover {
+                color: #B62E0E !important;
+            }
+        }
+
+        .menu_left:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    .det {
+
+        .cont_1 {
+            display: flex;
+            width: 100%;
+            gap: 30px;
+            margin-bottom: 30px;
+            margin-top: 44px;
+
+            .cont_1_1 {
+                background-color: #EEEEEE;
+                padding: 30px 45px;
+                width: 100%;
+                max-width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                h3 {
+                    font-family: Manrope;
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 27px;
+                    text-align: left;
+                }
+
+                p {
+                    font-family: Manrope;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    text-align: left;
+                }
+            }
+        }
+
+        a.button_2 {
+            max-width: 300px;
+            height: 60px;
+            text-transform: none;
+            font-family: Manrope;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 25.2px;
+            text-align: left;
+            margin-bottom: 60px;
+        }
+
+        .text__container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            h3 {
+                font-family: Noto Serif;
+                font-size: 35px;
+                font-weight: 600;
+                line-height: 56px;
+                text-align: left;
+                text-transform: uppercase;
+            }
+
+            .flex {
+                flex-wrap: wrap;
+                gap: 30px;
+
+
+
+                .card.default {
+                    width: 100%;
+                    max-width: 410px;
+                    min-height: 410px;
+                    padding: 30px 50px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    border: 1px solid #DCDCDC;
+                    margin: 0;
+                    height: min-content;
+
+
+                    h4,
+                    h3,
+                    h5,
+                    h6 {
+                        font-family: Manrope;
+                        font-size: 24px;
+                        font-weight: 600;
+                        line-height: 33.6px;
+                        text-align: left;
+                    }
+
+                    .cont {
+                        min-height: 220px;
+                        max-height: 220px;
+                        overflow: hidden;
+                        position: relative;
+                        padding-bottom: 20px;
+
+                        .cont-size {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 15px;
+                        }
+
+                        ul {
+                            gap: 10px;
+
+                            li {
+                                font-family: Manrope;
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 22.4px;
+                                text-align: left;
+                            }
+                        }
+
+                        .shadow {
+                            height: 135px;
+                            position: absolute;
+                            z-index: 5;
+                            bottom: 0px;
+                            left: 0;
+                            width: 100%;
+                            -webkit-box-shadow: 0px -74px 22px -15px rgb(255, 255, 255) inset;
+                            -moz-box-shadow: 0px -74px 22px -15px rgb(255, 255, 255) inset;
+                            box-shadow: 0px -74px 22px -15px rgb(255, 255, 255) inset;
+                        }
+                    }
+
+                    .more {
+                        font-family: Manrope;
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 22.4px;
+                        text-align: left;
+                        color: #DB3B16 !important;
+                        cursor: pointer;
+                    }
+                }
+
+                .card.open {
+
+                    .cont {
+
+                        min-height: none;
+                        max-height: none;
+
+                        .shadow {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .default {
+                margin-top: 30px;
+                gap: 20px;
+
+                h2 {
+                    font-family: Noto Serif;
+                    font-size: 35px;
+                    font-weight: 600;
+                    line-height: 52.5px;
+                    text-align: left;
+                    text-transform: uppercase;
+                    margin-bottom: 10px;
+                    // word-break: break-word;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .serv_det .det .cont_1 {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 760px) {
+    .serv_det .menu__cont {
+        display: none;
+    }
+
+    .serv_det .det .cont_1 {
+        gap: 20px;
+    }
+
+    .serv_det .det .cont_1 .cont_1_1 {
+        padding: 30px 15px;
+    }
+
+    .serv_det .det a.button_2 {
+        max-width: none;
+    }
+
+    .serv_det .det .text__container h3 {
+        font-family: Noto Serif;
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 40px;
+        text-align: left;
+    }
+
+    .serv_det .det .text__container .flex .card.default {
+        padding: 30px 15px;
+    }
+
+    .serv_det .det .text__container .default h2 {
+        font-family: Noto Serif;
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 37.5px;
+        text-align: left;
+    }
+}
