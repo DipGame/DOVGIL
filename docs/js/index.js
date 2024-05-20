@@ -36,6 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
         element.classList.toggle("invise");
     }
 
+    function clearInputValue(input) {
+        input.value = "";
+    }
+
     ymaps.ready(init);
 
     function init() {
@@ -446,17 +450,41 @@ document.addEventListener("DOMContentLoaded", function () {
                 input.removeEventListener('input', check)
             }
 
-            // function handleTextGood() {
-            //     formSel.classList.add("good");
-            //     hedContText.textContent = "Спасибо за заявку! Скоро мы свяжемся с вами!";
-            // }
+            function handleTextGood() {
+                clearInputValue(nameInp);
+                clearInputValue(phoneInp);
+                document.querySelector('.popupGood').querySelector('h3').textContent = 'Заявка Успешно отправлена!';
+                document.querySelector('.popupGood').querySelector('p').textContent = 'Скоро мы свяжемся с вами';
+                removeOpen(oneForm.parentNode.parentNode);
+                addOpen(document.querySelector('.popupGood'));
+                setTimeout(() => {
+                    removeOpen(document.querySelector('.popupGood'));
+                    removeOpen(overlay);
+                }, 5000);
+            }
 
             function handleTextNoGood() {
-                alert("Повторите попытку позже");
+                removeOpen(oneForm.parentNode.parentNode);
+                document.querySelector('.popupGood').querySelector('h3').textContent = 'Повторите попытку позже';
+                addOpen(document.querySelector('.popupGood'));
+                setTimeout(() => {
+                    removeOpen(document.querySelector('.popupGood'));
+                    if (overlay.classList.contains("open")) {
+                        addOpen(oneForm.parentNode.parentNode);
+                    }
+                }, 5000);
             }
 
             function handleTextError() {
-                alert("Что-то пошло не так");
+                removeOpen(oneForm.parentNode.parentNode);
+                document.querySelector('.popupGood').querySelector('h3').textContent = 'Что-то пошло не так';
+                addOpen(document.querySelector('.popupGood'));
+                setTimeout(() => {
+                    removeOpen(document.querySelector('.popupGood'));
+                    if (overlay.classList.contains("open")) {
+                        addOpen(oneForm.parentNode.parentNode);
+                    }
+                }, 5000);
             }
 
             oneForm.addEventListener('submit', (e) => {
@@ -470,6 +498,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (checkInputsValid(nameInp, 1) && checkInputsValid(phoneInp, 17)) {
 
                     console.log('good');
+                    handleTextGood();
                     // grecaptcha.ready(function () {
                     //     grecaptcha.execute('6Lfk9qspAAAAALXnyJqhAd6kX-ZFapXhfIN0DmQ-', { action: 'submit' }).then(function (token) {
                     //         let formData = new FormData();
@@ -533,20 +562,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Скрипт открытия/закрытия формы попап
     if (document.querySelector('.popupForm')) {
-        const popupForm = document.querySelector('.popupForm');
-        const popupFormCloseBtn = popupForm.querySelector('.close-btn');
-        const popupFormOpenBtn = document.querySelectorAll('.open-form-btn'); //Кнопки с таким классом будут вызывать попап
-
-        popupFormCloseBtn.addEventListener('click', () => {
-            removeOpen(popupForm);
-            removeOpen(overlay);
-        })
-
-        popupFormOpenBtn.forEach(element => {
-            element.addEventListener('click', () => {
-                addOpen(popupForm);
-                addOpen(overlay);
+        const popupForm = document.querySelectorAll('.popupForm');
+        let popupFormOpenBtn = document.querySelectorAll('.open-form-btn'); //Кнопки с таким классом будут вызывать попап
+        popupForm.forEach(popup => {
+            let popupFormCloseBtn = popup.querySelector('.close-btn');
+            popupFormCloseBtn.addEventListener('click', () => {
+                removeOpen(popup);
+                removeOpen(overlay);
             })
+            if (popup.querySelector('form')) {
+                popupFormOpenBtn.forEach(element => {
+                    element.addEventListener('click', () => {
+                        addOpen(popup);
+                        addOpen(overlay);
+                    })
+                });
+            }
         });
+
     }
 });

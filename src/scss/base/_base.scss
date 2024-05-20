@@ -449,8 +449,8 @@ a.button_2 {
 	justify-content: start;
 	align-items: start;
 	flex-direction: row;
-	top: 140px;
-	transform: translate(-50%, 0%);
+	// top: 140px;
+	// transform: translate(-50%, 0%);
 	.popup__container {
 		background-color: #013C38;
 		position: relative;
@@ -620,4 +620,14 @@ a.button_2 {
 .popupForm::-webkit-scrollbar {
 	width: 0;
 	height: 0;
+}
+
+.popupGood {
+	.popup__container {
+		min-height: auto;
+		
+		h3, p {
+			text-align: center;
+		}
+	}
 }
