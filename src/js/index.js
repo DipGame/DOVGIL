@@ -502,4 +502,51 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
     }
+
+    // Скрипт показать еще ОТЫЗВЫ
+    if (document.querySelector('.client_2')) {
+        const rewCont = document.querySelector('.client_2');
+
+        if (rewCont.querySelector('.button')) {
+            const openMoreBtn = rewCont.querySelectorAll('.button');
+            openMoreBtn.forEach(element => {
+                element.addEventListener('click', () => {
+                    let inviseCardRew = element.parentNode.querySelectorAll('.card.invise');
+                    let num = 0;
+                    inviseCardRew.forEach(el => {
+                        if (element.parentNode.id == 1 && num < 6) {
+                            removeInvise(el);
+                            num++;
+                        }
+                        if (element.parentNode.id == 2 && num < 8) {
+                            removeInvise(el);
+                            num++;
+                        }
+                    });
+                    if (!element.parentNode.querySelector('.card.invise')) {
+                        addInvise(element);
+                    }
+                })
+            });
+        }
+    }
+
+    //Скрипт открытия/закрытия формы попап
+    if (document.querySelector('.popupForm')) {
+        const popupForm = document.querySelector('.popupForm');
+        const popupFormCloseBtn = popupForm.querySelector('.close-btn');
+        const popupFormOpenBtn = document.querySelectorAll('.open-form-btn'); //Кнопки с таким классом будут вызывать попап
+
+        popupFormCloseBtn.addEventListener('click', () => {
+            removeOpen(popupForm);
+            removeOpen(overlay);
+        })
+
+        popupFormOpenBtn.forEach(element => {
+            element.addEventListener('click', () => {
+                addOpen(popupForm);
+                addOpen(overlay);
+            })
+        });
+    }
 });

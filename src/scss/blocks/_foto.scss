@@ -178,3 +178,105 @@
         text-align: left;
     }
 }
+
+.foto_2 {
+
+    padding-bottom: 80px;
+
+    .cont {
+
+        gap: 50px;
+
+        .container {
+            width: 100%;
+            max-width: 630px;
+
+            p {
+                font-family: Manrope;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                text-align: left;
+                color: #FFF;
+                margin-bottom: 30px;
+            }
+
+            p:last-of-type {
+                margin-bottom: 0;
+            }
+
+            .title {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                h3 {
+                    font-family: Noto Serif;
+                    font-size: 50px;
+                    font-weight: 500;
+                    line-height: 75px;
+                    text-align: left;
+                    color: #FFF;
+                    // width: 430px;
+                    
+                }
+
+                p {
+                    font-family: Manrope;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    text-align: left;
+                    color: #FFF;
+                    // width: 310px;
+                }
+            }
+
+            .cont_2 {
+
+                margin-top: 60px;
+                margin-bottom: 60px;
+
+                .absol {
+                    position: absolute;
+                    bottom: 0;
+                    left: 1px;
+                    transform: translateX(-100%) rotate(90deg);
+                    top: 20px;
+                }
+
+                .absol_2 {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1160px) {
+    .foto_2 .cont {
+        flex-direction: column;
+
+        .container {
+            .cont_2 {
+
+                margin-top: 60px;
+                margin-bottom: 60px;
+
+                .absol {
+                    
+                    display: none;
+                }
+
+                .absol_2 {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0px;
+                    transform: translateX(-100%) rotate(0deg);
+                    top: 20px;
+                    display: block;
+                }
+            }
+        }
+    }
+}

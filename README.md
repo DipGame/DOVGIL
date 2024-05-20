@@ -4,3 +4,5 @@ https://dipgame.github.io/DOVGIL/about.html
 https://dipgame.github.io/DOVGIL/keys_detail.html
 https://dipgame.github.io/DOVGIL/service_detail.html
 https://dipgame.github.io/DOVGIL/service.html
+https://dipgame.github.io/DOVGIL/contacts.html
+https://dipgame.github.io/DOVGIL/rew.html

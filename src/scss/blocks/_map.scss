@@ -1,0 +1,11 @@
+.map {
+    width: 100%;
+    max-width: 1290px;
+    margin: 0 auto 100px;
+}
+
+@media (max-width: 600px) {
+    .map {
+        display: none;
+    } 
+}
